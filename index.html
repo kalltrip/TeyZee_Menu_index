@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="TeyZEE Menus - Easy online food ordering for restaurants via WhatsApp. Choose from Silver, Gold, or Platinum plans.">
+    <meta name="keywords" content="restaurant menu, online ordering, WhatsApp orders, TeyZEE, food delivery">
+    <meta name="author" content="TeyZEE Menus">
+
+    <title>TeyZEE Menus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .link {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            line-height: 1.4rem;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+            padding-bottom: 50px;
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+        }
+
+        .pricing-box {
+            background-color: #ffffff;
+            padding: 30px;
+            margin: 20px auto;
+            border-radius: 8px;
+            max-width: 400px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-box h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .pricing-box p {
+            color: #777;
+            font-size: 16px;
+        }
+
+        .price {
+            font-size: 32px;
+            font-weight: bold;
+            color: #4CAF50;
+            margin: 20px 0;
+        }
+
+        .pricing-box:hover {
+            transform: scale(1.05);
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            background-color: #4CAF50;
+        }
+
+        .pricing-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .features {
+            background-color: #ffffff;
+            padding: 30px;
+            margin: 20px auto;
+            border-radius: 8px;
+            max-width: 400px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .features:hover {
+            transform: scale(1.05);
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .features h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+
+        .feature-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .feature-list li {
+            background: #ffffff;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-list li::before {
+            content: "✔";
+            color: #28a745;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        #topBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 1rem;
+            color: black;
+            background: none;
+            /* Keeps it transparent */
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            display: none;
+            font-size: 2.5rem;
+            width: 50px;
+            /* Adjust size */
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .order-button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background-color: #ff6600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .order-button:hover {
+            background-color: #e65c00;
+        }
+
+        .translate {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Add this to center horizontally */
+            gap: 10px;
+            /* Optional: Adds spacing between text and the translation widget */
+        }
+
+        #topBtn:hover {
+            color: (17, 182, 80);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>TeyZEE Menus!</h1>
+        <p>Easy Online Orders
+            <br> for Restaurants -
+            <br> InHouse/ Order On WhatsApp
+        </p>
+        <a href="https://form.typeform.com/to/L7bAdVZ7" class="order-button" target="_blank">Order Tezyee Menu</a>
+    </div>
+    <div class="translate">
+        <p>Translate this page:</p>
+        <div id="google_translate_element"></div>
+    </div>
+    <div class="container">
+        <div class="pricing-box" id="silver">
+            <h2>Silver Plan - ₹999/year</h2>
+            <p>Perfect for small restaurant/hotel food ordering inside the restaurant; save on menu costs of printed
+                menu.</p>
+            <p>Includes <br>Free Site Link, <br>Free QR Code<br> & Free Site Security</p>
+            <div class="price">₹999/Year</div>
+            <button class="cta-button" onclick="window.location.href='https://wa.me/919892527420'">WhatsApp Us</button>
+            <img src="images/silver-image.jpg" alt="Silver Plan package display" loading="lazy">
+        </div>
+
+        <div class="pricing-box" id="gold">
+            <h2>Gold Plan - ₹1499/year</h2>
+            <p>Perfect for medium-sized restaurant/hotel food with parcel/delivery/home orders; also save on menu costs
+                of printed menu.</p>
+            <p>Includes <br>Free Site Link, <br>Free QR Code<br> & Free Site Security</p>
+            <div class="price">₹1499/Year</div>
+            <button class="cta-button" onclick="window.location.href='https://wa.me/919892527420'">WhatsApp Us</button>
+            <img src="images/gold-dark-background.jpg" alt="Gold Plan package display on dark background"
+                loading="lazy">
+        </div>
+
+        <div class="pricing-box" id="platinum">
+            <h2>Platinum Plan - ₹1999/year</h2>
+            <p>Food Images SELL MORE Dishes.</p>
+            <p>Perfect for multi-cuisine Indian/Chinese/Pizza/Burger/Cafe restaurant/hotel.</p>
+            <p>Order food online with parcel/delivery/home orders; save on menu costs of printed menu.</p>
+            <p>Includes <br>Free Site Link, <br>Free QR Code<br> & Free Site Security</p>
+            <div class="price">₹1999/Year</div>
+            <button class="cta-button" onclick="window.location.href='https://wa.me/919892527420'">WhatsApp Us</button>
+            <img src="images/platinum-dark-background.jpg" alt="Platinum Plan package display on dark background"
+                loading="lazy">
+        </div>
+    </div>
+    <button onclick="topFunction()" id="topBtn">⬆</button>
+
+    <div class="features">
+        <h2>Why Choose TeyZEE Menus?</h2>
+        <div class="feature-list">
+            <li><strong>Easy to Order</strong></li>
+            <li><strong>WhatsApp Order & Pay</strong></li>
+            <li><strong>Your UPI ID to receive Payments</strong></li>
+            <li><strong>Day/Night Mode</strong></li>
+            <li><strong>Send Delivery Location</strong></li>
+            <li><strong>Dish Orders can be switched off</strong></li>
+            </ul>
+        </div>
+    </div>
+    <div class="link">
+        <a href="https://form.typeform.com/to/L7bAdVZ7" class="order-button" target="_blank">Order Tezyee Menu</a>
+    </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 TeyZEE is a brand of Kall Trip Pvt Ltd, Mumbai, India. All rights reserved.</p>
+        <div class="contact-info">
+            <p>Contact us: <a href="https://wa.me/919029027420">WhatsApp</a> | Office- WeWork Platinum, Marol, Andheri
+                East Mumbai 400059 India |
+                <a href="mailto:ariaprohotels@kalltrip.com">ariaprohotels@kalltrip.com</a>
+            </p>
+        </div>
+    </div>
+    <script>
+
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            document.getElementById("topBtn").style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    
+   
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      includedLanguages: 'as,bn,gu,hi,kn,ml,mr,or,pa,ta,te,ur'
+    }, 'google_translate_element');
+  }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+</body>
+
+</html>

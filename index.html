@@ -53,17 +53,44 @@
             text-decoration: underline;
         }
 
+        .btn {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .cta-button,
+        .order-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background-color: green;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button {
+            background-color: rgb(0, 252, 0);
+            color: white;
+        }
+
+        .cta-button:hover,
+        .order-button:hover {
+            background-color: #4CAF50;
+        }
+
         .container {
             padding: 20px;
             text-align: center;
             padding-bottom: 50px;
-
-            .container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .pricing-box {
@@ -75,7 +102,7 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .pricing-box h2 {
+        .pricing-box h1 {
             color: #333;
             font-size: 24px;
             margin-bottom: 10px;
@@ -99,21 +126,6 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
-        .cta-button {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            margin: 10px;
-        }
-
-        .cta-button:hover {
-            background-color: #4CAF50;
-        }
 
         .pricing-box img {
             max-width: 100%;
@@ -137,7 +149,7 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
-        .features h2 {
+        .features h1 {
             color: #333;
             font-size: 28px;
             margin-bottom: 20px;
@@ -169,6 +181,49 @@
             font-size: 18px;
             margin-right: 10px;
         }
+
+        .featurelist ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            width: 100%;
+            text-align: left;
+            /* Align text to the left */
+        }
+
+        .featurelist li {
+            list-style: none;
+            padding: 12px 18px;
+            margin: 8px 0;
+            background: #e6f7e6;
+            /* Light green background */
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            color: #2d6a4f;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            /* Space between checkmark and text */
+            transition: all 0.3s ease-in-out;
+        }
+
+        .featurelist li::before {
+            content: "✅";
+            font-size: 18px;
+            flex-shrink: 0;
+            /* Prevent shrinking */
+            width: 24px;
+            /* Ensures consistent space */
+            text-align: center;
+        }
+
+        .featurelist li:hover {
+            background: #c3e6cb;
+            transform: scale(1.05);
+        }
+
+
 
         .footer {
             background-color: #333;
@@ -206,21 +261,6 @@
             line-height: 50px;
         }
 
-        .order-button {
-            display: inline-block;
-            padding: 12px 24px;
-            font-size: 20px;
-            font-weight: bold;
-            color: white;
-            background-color: #ff6600;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-        }
-
-        .order-button:hover {
-            background-color: #e65c00;
-        }
 
         .translate {
             text-align: center;
@@ -235,7 +275,6 @@
         #topBtn:hover {
             color: (17, 182, 80);
         }
-
     </style>
 </head>
 
@@ -246,7 +285,7 @@
             <br> for Restaurants -
             <br> InHouse/ Order On WhatsApp
         </p>
-        <a href="https://form.typeform.com/to/L7bAdVZ7" class="order-button" target="_blank">Order Tezyee Menu</a>
+
     </div>
     <div class="translate">
         <p>Translate this page:</p>
@@ -254,49 +293,90 @@
     </div>
     <div class="container">
         <div class="pricing-box" id="silver">
-            <h2>Silver Plan - ₹999/year</h2>
+            <h1>Silver Plan - ₹999/year</h1>
             <p>Perfect for small restaurant/hotel food ordering inside the restaurant; save on menu costs of printed
                 menu.</p>
-            <p>Includes <br>Free Site Link, <br>Free QR Code<br> & Free Site Security</p>
+            <div class="featurelist">
+                <ul>
+                    <li>Pay Hotel/ Restaurant with UPI </li>
+                    <li> Select menu as per Veg/non-Veg etc </li>
+                    <li> Select Cuisine North Indian/Chinese etc. </li>
+                </ul>
+
+            </div>
             <div class="price">₹999/Year</div>
-            <button class="cta-button" onclick="window.location.href='https://wa.me/919892527420'">WhatsApp Us</button>
             <img src="images/silver-image.jpg" alt="Silver Plan package display" loading="lazy">
+            <div class="btn">
+                <button class="cta-button" onclick="window.location.href='https://wa.me/919029027420'">WhatsApp
+                    Us</button>
+                <a href="https://form.typeform.com/to/L7bAdVZ7" class="order-button" target="_blank">Order Tezyee
+                    Menu</a>
+            </div>
         </div>
 
         <div class="pricing-box" id="gold">
-            <h2>Gold Plan - ₹1499/year</h2>
+            <h1>Gold Plan - ₹1499/year</h1>
             <p>Perfect for medium-sized restaurant/hotel food with parcel/delivery/home orders; also save on menu costs
                 of printed menu.</p>
-            <p>Includes <br>Free Site Link, <br>Free QR Code<br> & Free Site Security</p>
+            <div class="featurelist">
+                <ul>
+                    <li>Silver Plan features</li>
+                    <li> Send Order on WhatsApp *</li>
+                    <li> Send Location *</li>
+                    <li> Last order time / Restaurant Closing time</li>
+                </ul>
+
+            </div>
             <div class="price">₹1499/Year</div>
-            <button class="cta-button" onclick="window.location.href='https://wa.me/919892527420'">WhatsApp Us</button>
+
             <img src="images/gold-dark-background.jpg" alt="Gold Plan package display on dark background"
                 loading="lazy">
+            <div class="btn">
+                <button class="cta-button" onclick="window.location.href='https://wa.me/919029027420'">WhatsApp
+                    Us</button>
+                <a href="https://form.typeform.com/to/L7bAdVZ7" class="order-button" target="_blank">Order Tezyee
+                    Menu</a>
+            </div>
         </div>
 
         <div class="pricing-box" id="platinum">
-            <h2>Platinum Plan - ₹1999/year</h2>
+            <h1>Platinum Plan - ₹1999/year</h1>
             <p>Food Images SELL MORE Dishes.</p>
             <p>Perfect for multi-cuisine Indian/Chinese/Pizza/Burger/Cafe restaurant/hotel.</p>
             <p>Order food online with parcel/delivery/home orders; save on menu costs of printed menu.</p>
-            <p>Includes <br>Free Site Link, <br>Free QR Code<br> & Free Site Security</p>
+            <div class="featurelist">
+                <ul>
+                    <li> Gold Plan features</li>
+                    <li>Sell More with Food Photos</li>
+                    <li>Morning only Orders (Food available time)*</li>
+                    <li> Night Mode</li>
+                    <li> Cocktail bar menu</li>
+                </ul>
+            </div>
             <div class="price">₹1999/Year</div>
-            <button class="cta-button" onclick="window.location.href='https://wa.me/919892527420'">WhatsApp Us</button>
+
             <img src="images/platinum-dark-background.jpg" alt="Platinum Plan package display on dark background"
                 loading="lazy">
+            <div class="btn">
+                <button class="cta-button" onclick="window.location.href='https://wa.me/919029027420'">WhatsApp
+                    Us</button>
+                <a href="https://form.typeform.com/to/L7bAdVZ7" class="order-button" target="_blank">Order Tezyee
+                    Menu</a>
+            </div>
         </div>
     </div>
     <button onclick="topFunction()" id="topBtn">⬆</button>
 
     <div class="features">
-        <h2>Why Choose TeyZEE Menus?</h2>
+        <h1>Why Choose TeyZEE Menus?</h1>
         <div class="feature-list">
-            <li><strong>Easy to Order</strong></li>
-            <li><strong>WhatsApp Order & Pay</strong></li>
-            <li><strong>Your UPI ID to receive Payments</strong></li>
-            <li><strong>Day/Night Mode</strong></li>
-            <li><strong>Send Delivery Location</strong></li>
-            <li><strong>Dish Orders can be switched off</strong></li>
+            <ul>
+                <li><strong>Easy to Order</strong></li>
+                <li><strong>WhatsApp Order & Pay</strong></li>
+                <li><strong>Your UPI ID to receive Payments</strong></li>
+                <li><strong>Day/Night Mode</strong></li>
+                <li><strong>Send Delivery Location</strong></li>
+                <li><strong>*Time base Food ordering(At Extra Cost)</strong></li>
             </ul>
         </div>
     </div>
@@ -310,7 +390,10 @@
         <div class="contact-info">
             <p>Contact us: <a href="https://wa.me/919029027420">WhatsApp</a> | Office- WeWork Platinum, Marol, Andheri
                 East Mumbai 400059 India |
-                <a href="mailto:ariaprohotels@kalltrip.com">ariaprohotels@kalltrip.com</a>
+                <a
+                    href="mailto:ariaprohotels@kalltrip.com?subject=Teyzee Menus Enquiry&body=Hello, I would like to inquire about Teyzee menus!">Email
+                    Us</a>
+                <!-- <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ariaprohotels@kalltrip.com" target="_blank">Email Us</a> -->
             </p>
         </div>
     </div>
@@ -325,18 +408,19 @@
             document.documentElement.scrollTop = 0;
         }
     </script>
-    
-   
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      includedLanguages: 'as,bn,gu,hi,kn,ml,mr,or,pa,ta,te,ur'
-    }, 'google_translate_element');
-  }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                includedLanguages: 'as,bn,gu,hi,kn,ml,mr,or,pa,ta,te,ur'
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
 </body>
